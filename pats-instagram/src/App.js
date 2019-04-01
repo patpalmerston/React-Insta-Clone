@@ -19,7 +19,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
             {this.state.data.map((post) => {
-              return <PostContainer passPost={post} key={post.id} />
+              return <PostContainer passCon={post} key={post.id} />
             })}
           
           

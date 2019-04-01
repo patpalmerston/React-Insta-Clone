@@ -10,7 +10,7 @@ function CommentSection(props) {
     {props.passCom.map((comment, index) => {
       return(
         <div className='userComment' key={index}>
-          <span>{comment.username}</span>
+          <span>{comment.username}: </span>
           <span>{comment.text}</span>
         </div>
       )
@@ -21,7 +21,7 @@ function CommentSection(props) {
         className='comment'
         placeholder='Comment Here'
         name='commentInput'
-      />
+      />{' '}
     </form>
     
     </>
