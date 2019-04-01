@@ -1,32 +1,28 @@
 import React from 'react'
 
+import Comment from './Comment'
+import CommentInput from './CommentInput'
 
-function CommentSection(props) {
-  return(
-    <>
 
-    <h3>{props.username}</h3>
+class CommentSection extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      comments: props.passCom
+    }
+  }
 
-    {props.passCom.map((comment, index) => {
-      return(
-        <div className='userComment' key={index}>
-          <span>{comment.username}: </span>
-          <span>{comment.text}</span>
-        </div>
-      )
-    })}
 
-    <form>
-      <input
-        className='comment'
-        placeholder='Comment Here'
-        name='commentInput'
-      />{' '}
-    </form>
-    
-    </>
-  )
+  render() {
+    return (
+      <div>
+
+      {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
+      <CommentInput />
+      </div>
+     
+    )
+  }
 }
-
 
 export default CommentSection
