@@ -1,21 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Data from './Data'
+import PostContainer from './PostContainer/PostContainer'
+
+
+
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state= {
+      data: Data
+    };
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
+            {this.state.data.map((post) => {
+              return <PostContainer passPost={post} key={post.id} />
+            })}
           
-          <p>
-            Pats Instagram
-          </p>
           
         </header>
       </div>
     );
   }
+
 }
 
 export default App;
