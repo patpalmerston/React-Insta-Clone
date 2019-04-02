@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function CommentInput(props) {
   return(
@@ -10,6 +11,10 @@ function CommentInput(props) {
       />
     </form>
   )
+}
+
+CommentInput.propTypes = {
+
 }
 
 
