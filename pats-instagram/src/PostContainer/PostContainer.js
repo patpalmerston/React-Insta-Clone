@@ -8,7 +8,10 @@ function PostContainer(props) {
   return(
     <div className='Container-wrap'>
 
-    <Posts passPosts={props.passCon} />
+    <Posts 
+    upDatePost={props.upDatePost} 
+    passPosts={props.passCon} 
+    />
     
     </div>
   )

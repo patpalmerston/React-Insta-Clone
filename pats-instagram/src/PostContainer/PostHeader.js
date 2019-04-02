@@ -10,7 +10,8 @@ function PostHeader(props) {
         alt='thumbnail' 
         />
       </div>
-      <span className='user'>{props.username}</span>
+      <span className='user'>{props.username}
+      </span>
     </div>
   );
 };

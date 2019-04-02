@@ -17,7 +17,12 @@ function Posts(props) {
         className='post-image'
         src={props.passPosts.imageUrl}/>
       </div>
-      <CommentSection passCom={props.passPosts.comments} />
+      
+      <CommentSection 
+        upDatePost={props.upDatePost} 
+        passCom={props.passPosts.comments}
+        passId={props.passPosts.id} 
+      />
     </div>
   )
 }

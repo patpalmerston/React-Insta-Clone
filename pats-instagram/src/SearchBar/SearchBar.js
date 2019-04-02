@@ -7,7 +7,7 @@ function SearchBar(pops) {
 
       <div className='logo-wrap'>
         <div>
-        <i class="fab fa-instagram"></i>
+        <i className="fab fa-instagram"></i>
         </div>
         <div>
           <h4>Pats-Instagram</h4>

@@ -2,15 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function CommentInput(props) {
-  return(
-    <form>
-      <input
-        className='comment'
-        placeholder='Comment Here'
-        name='commentInput'
-      />
-    </form>
-  )
+  
+    return(
+      <form onSubmit={(event) => {props.upDatePost(event, props.comment, props.passId)}}>
+        <input
+          className='comment'
+          placeholder='Comment Here'
+          name='commentInput'
+          onChange={props.eventHandler}
+          value={props.comment}
+        />
+      </form>
+    )
+  
 }
 
 CommentInput.propTypes = {
