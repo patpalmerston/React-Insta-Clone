@@ -1,3 +1,5 @@
 {
-  "workbench.colorTheme": "CodeSandbox"
+  "workbench.colorTheme": "CodeSandbox",
+  "editor.showFoldingControls": "always",
+  "editor.foldingStrategy": "indentation"
 }
