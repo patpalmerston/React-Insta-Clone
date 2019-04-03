@@ -12,7 +12,7 @@ const Authentication = PostsPage => LogIn =>
       }
     }
 
-    toggleLogin = () => {
+    toggleLogin = (event) => {
       if (!this.state.LogIn) {
         localStorage.setItem('LogIn', true);
         console.log('added to localStorage')
@@ -29,7 +29,7 @@ const Authentication = PostsPage => LogIn =>
       if(this.state.LogIn === true) {
         return <PostsPage />
       } else {
-        return <LogIn toggleLogin={this.state.toggleLogin}/>
+        return <LogIn toggleLogin={this.toggleLogin}/>
       }
     }
   }
