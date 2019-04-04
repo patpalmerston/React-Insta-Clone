@@ -1,4 +1,4 @@
-.search-wrap {
+/* .search-wrap {
 max-width: 100%;
 width: 100%;
 display: flex;
@@ -10,9 +10,9 @@ text-align: center;
 border-bottom: 1px solid silver;
 
 
-}
+} */
 
-.logo-wrap {
+/* .logo-wrap {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -26,4 +26,4 @@ flex-direction: row;
 width: 20%;
 justify-content: space-between;
 
-}
+} */

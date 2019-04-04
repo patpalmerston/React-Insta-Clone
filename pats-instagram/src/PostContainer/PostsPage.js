@@ -9,7 +9,9 @@ class PostsPage extends React.Component {
   constructor(){
     super()
     this.state= {
-      data: []
+      data: [],
+      filteredPosts: [],
+      searching: false
     };
   }
 
@@ -74,13 +76,26 @@ class PostsPage extends React.Component {
     })
   }
 
+  upDateSearch = e => {
+    if(e.target.value !== ''){
+      const searchIt = this.state.data.filter(post => {
+        if (post.username.includes(e.target.value)) {
+          return post;
+        }
+      })
+      this.setState({filteredPosts: searchIt, searching: true})
+    } else {
+      this.setState({searching: false})
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-            <SearchBar />
+            <SearchBar upDateSearch={this.upDateSearch} />
 
-            {this.state.data.map((post) => {
+            {(this.state.searching ? this.state.filteredPosts : this.state.data).map((post) => {
               // console.log(post)
               return <PostContainer 
                         upDatePost={this.upDatePost}

@@ -18,7 +18,10 @@ function CommentInput(props) {
 }
 
 CommentInput.propTypes = {
-
+  comment: PropTypes.string,
+  eventHandler: PropTypes.func,
+  passId: PropTypes.string,
+  upDatePost: PropTypes.func
 }
 
 

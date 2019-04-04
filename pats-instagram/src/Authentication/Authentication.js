@@ -3,6 +3,10 @@ import React from 'react'
 import LogIn from './LogIn'
 import PostsPage from '../PostContainer/PostsPage'
 
+
+
+
+
 const Authentication = PostsPage => LogIn =>
   class extends React.Component {
     constructor() {
